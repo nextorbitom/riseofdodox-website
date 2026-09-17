@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,77 +28,60 @@
         <h2>THE RETURN OF THE DODO</h2>
 
         <p>
-            The world declared the Dodo extinct.<br>
+            The world declared the Dodo extinct.
             History was wrong.
         </p>
 
         <div class="buttons">
 
-            <a href="https://pump.fun/coin/5nxGzE2j8itKn2zwPTn24cxAYkKrYknKfrghhA1Fpump"
-               target="_blank"
-               class="btn gold">
-               BUY DODOX
+            <a
+                href="https://pump.fun/coin/5nxGzE2j8itKn2zwPTn24cxAYkKrYknKfrghhA1Fpump"
+                target="_blank"
+                class="btn gold">
+                BUY DODOX
             </a>
 
-            <a href="https://t.me/Dodoxofficial1"
-               target="_blank"
-               class="btn dark">
-               JOIN TELEGRAM
+            <a
+                href="https://t.me/Dodoxofficial1"
+                target="_blank"
+                class="btn dark">
+                JOIN TELEGRAM
             </a>
 
         </div>
 
-        <div class="contract-section">
+        <!-- CONTRACT BOX -->
+
+        <div class="contract-box">
 
             <h3>Launchpad Address</h3>
 
-            <div class="contract-box">
+            <div class="address-wrapper">
 
-                <span id="contractAddress">
-                    5nxGzE2j8itKn2zwPTn24cxAYkKrYknKfrghhA1Fpump
-                </span>
+                <input
+                    type="text"
+                    id="contractAddress"
+                    readonly
+                    value="5nxGzE2j8itKn2zwPTn24cxAYkKrYknKfrghhA1Fpump">
 
-                <button onclick="copyAddress()" class="copy-btn">
+                <button onclick="copyAddress()">
                     COPY
                 </button>
 
             </div>
 
+            <a
+                href="https://dexscreener.com/solana/e23yc5bntyg5y3zlxabvigbytqqcrdmyeicndawzweum"
+                target="_blank"
+                class="chart-btn">
+                📈 VIEW LIVE CHART
+            </a>
+
         </div>
 
     </div>
 
 </section>
-
-<section id="chart-section" class="chart-section">
-
-    <div class="chart-container">
-
-        <h2>LIVE DODOX CHART</h2>
-
-        <p>
-            Follow the resurrection in real time.
-        </p>
-
-        <iframe
-            src="https://dexscreener.com/solana/e23yc5bntyg5y3zlxabvigbytqqcrdmyeicndawzweum?embed=1&theme=dark&chartStyle=1"
-            width="100%"
-            height="700"
-            style="border:none;border-radius:20px;">
-        </iframe>
-
-    </div>
-
-</section>
-
-<script>
-function copyAddress() {
-    navigator.clipboard.writeText(
-        "5nxGzE2j8itKn2zwPTn24cxAYkKrYknKfrghhA1Fpump"
-    );
-    alert("Launchpad address copied!");
-}
-</script>
 
 <script src="js/main.js"></script>
 
