@@ -1,6 +1,109 @@
-/* ==========================
-   CONTRACT ADDRESS BOX
-========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 250px;
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 96px;
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 52px;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    font-size: 28px;
+    margin-bottom: 35px;
+    max-width: 900px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.gold {
+    background: #d4af37;
+    color: #000;
+}
+
+.dark {
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    border: 2px solid #d4af37;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* CONTRACT ADDRESS */
 
 .contract-box {
     margin-top: 35px;
@@ -8,10 +111,8 @@
 }
 
 .contract-box h3 {
-    color: #ffffff;
-    font-size: 24px;
+    color: #fff;
     margin-bottom: 15px;
-    font-weight: 700;
 }
 
 .address-wrapper {
@@ -23,45 +124,52 @@
 }
 
 .address-wrapper input {
-    width: 650px;
+    width: 700px;
     max-width: 90%;
     padding: 14px;
     background: rgba(0,0,0,0.85);
     border: 2px solid #d4af37;
     border-radius: 10px;
-    color: #ffffff;
-    font-size: 15px;
+    color: white;
     text-align: center;
 }
 
 .address-wrapper button {
     background: #d4af37;
-    color: #000;
     border: none;
-    padding: 14px 24px;
+    padding: 14px 22px;
     border-radius: 10px;
-    cursor: pointer;
     font-weight: bold;
-    transition: 0.3s;
-}
-
-.address-wrapper button:hover {
-    transform: translateY(-2px);
+    cursor: pointer;
 }
 
 .chart-btn {
     display: inline-block;
     margin-top: 20px;
+    text-decoration: none;
     background: #d4af37;
     color: #000;
-    text-decoration: none;
-    padding: 14px 32px;
+    padding: 14px 28px;
     border-radius: 30px;
     font-weight: bold;
-    font-size: 18px;
-    transition: 0.3s;
 }
 
-.chart-btn:hover {
-    transform: translateY(-2px);
+@media (max-width: 768px) {
+
+    .hero-content h1 {
+        font-size: 54px;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        width: 180px;
+    }
 }
