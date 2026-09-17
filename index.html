@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>DODOX | The Return of the Dodo</title>
 
     <link rel="stylesheet" href="css/style.css">
@@ -27,7 +29,7 @@
         <h2>THE RETURN OF THE DODO</h2>
 
         <p>
-            The world declared the Dodo extinct.
+            The world declared the Dodo extinct.<br>
             History was wrong.
         </p>
 
@@ -47,11 +49,77 @@
 
         </div>
 
+        <div class="contract-section">
+
+            <h3>Launchpad Address</h3>
+
+            <div class="contract-box">
+
+                <span id="contractAddress">
+                    5nxGzE2j8itKn2zwPTn24cxAYkKrYknKfrghhA1Fpump
+                </span>
+
+                <button onclick="copyAddress()" class="copy-btn">
+                    COPY
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-links">
+
+            <a href="#chart-section" class="chart-link">
+                VIEW LIVE CHART ↓
+            </a>
+
+        </div>
+
     </div>
 
 </section>
 
+<section id="chart-section" class="chart-section">
+
+    <div class="chart-container">
+
+        <h2>LIVE DODOX CHART</h2>
+
+        <p>
+            Track DODOX price action in real time.
+        </p>
+
+        <!-- REPLACE THIS IFRAME AFTER YOU SEND DEXSCREENER LINK -->
+
+        <iframe
+            src="https://www.tradingview.com/chart/"
+            width="100%"
+            height="650"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+
+<script>
+
+function copyAddress() {
+
+    const address =
+        "5nxGzE2j8itKn2zwPTn24cxAYkKrYknKfrghhA1Fpump";
+
+    navigator.clipboard.writeText(address);
+
+    alert("Launchpad address copied!");
+
+}
+
+</script>
+
 <script src="js/main.js"></script>
 
 </body>
+
 </html>
